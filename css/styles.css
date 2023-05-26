@@ -1,13 +1,277 @@
-/*===| Google Fonts '' |===*/
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800&display=swap');
+/*===| Google Fonts 'Barlow' |===*/
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 
-/*===| Variables |===*/
+/**
+ * Estilos Globales
+ */
 
-
-/*===| Global Styles |===*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: '',sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-padding-top: 80px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0c0c0c;
+    animation: pageTransition 0.75s;
+}
+
+@keyframes pageTransition {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/**
+ * Font Family Encabezados
+ */
+
+h1, h2,
+h3, h4,
+h5, h6,
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+.nav-link,
+.dropdown-item {
+    font-family: 'Oxanium', sans-serif;
+}
+
+/**
+ * Botón Personalizado
+ */
+
+.btn-danger-2 {
+    background: linear-gradient( #ea2626, #841010);
+    border: 0;
+    outline: 0;
+    color: #fbfbfb;
+    font-weight: 500;
+    padding: 12px 55px;
+    text-decoration: none;
+    margin-top: 25px;
+}
+.btn-danger-2:hover {
+    background: linear-gradient( #ca1f1f, #750e0e);
+}
+
+.bg-dark-2 {
+    background-color: #0c0c0c;
+}
+
+.text-white-2 {
+    color: #b8b8b8;
+}
+
+/**
+ * Sección 404
+ */
+
+.section_404 {
+    min-height: calc(100vh - 80px);
+}
+
+/**
+ * Barra de Navegación
+ */
+
+.navbar {
+    background-color: #0c0c0c;
+}
+
+.nav-link {
+    color: #c3c3c3;
+}
+
+.nav-link:hover {
+    color: #da2843;
+}
+
+/**
+ * Menú Desplegable Plataformas
+ */
+
+.dropdown-toggle:focus:focus-within {
+    color: #da2843;
+}
+
+.dropdown-item:hover {
+    color: #da2843 !important;
+    background-color: transparent;
+}
+
+.toggle-genre:focus:focus-within {
+    color: #fcfcfc;
+}
+
+.home__section {
+    background-image:
+    linear-gradient(180deg, rgba(12,12,12,1) 0%, rgba(12,12,12,0) 100%),
+    linear-gradient(360deg, rgba(12,12,12,1) 0%, rgba(12,12,12,0) 100%),
+    url("../assets/portadas_secciones/home-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-weight: 700;
+    line-height: 1;
+}
+
+.home__card {
+    background-image:
+    linear-gradient(90deg, rgba(12,12,12,1) 0%, rgba(12,12,12,0) 100%),
+    url("../assets/portadas_secciones/home-card-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/**
+ * Sección Sobre Nosotros
+ */
+
+ .about__section {
+    background-image:
+    linear-gradient(180deg, rgba(12,12,12,1) 0%, rgba(12,12,12,0) 100%),
+    linear-gradient(360deg, rgba(12,12,12,1) 0%, rgba(12,12,12,0) 100%),
+    url("../assets/portadas_secciones/about-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+}
+
+.about-title {
+    position: relative;
+}
+
+.about-title::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 120px;
+    height: 5px;
+    background-color: #da2843;
+}
+
+
+/**
+ * Sección Todos los Juegos
+ */
+
+.all__games {
+    background-image:
+    linear-gradient(180deg, rgba(12,12,12,1) 0%, rgba(12,12,12,0) 100%),
+    linear-gradient(360deg, rgba(12,12,12,1) 0%, rgba(12,12,12,0) 100%),
+    url("../assets/portadas_secciones/games-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+}
+
+.all-games-title {
+    position: relative;
+}
+
+.all-games-title::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 5px;
+    background-color: #da2843;
+}
+
+.games-title {
+    position: relative;
+}
+
+.games-title::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 5px;
+    background-color: #da2843;
+}
+
+.card-description {
+    display: -webkit-box;
+    display: -moz-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+/**
+ * Sección Contacto
+ */
+
+.fav-title {
+    position: relative;
+}
+
+.fav-title::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 5px;
+    background-color: #da2843;
+}
+
+.fav-message {
+    height: 200px;
+    resize: none;
+}
+
+.process-info {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
 }
