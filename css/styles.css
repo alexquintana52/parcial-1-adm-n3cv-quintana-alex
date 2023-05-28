@@ -220,6 +220,10 @@ h1 {
     background-color: #da2843;
 }
 
+.buy-button {
+    cursor: pointer;
+}
+
 .games-title {
     position: relative;
 }

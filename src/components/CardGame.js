@@ -31,6 +31,7 @@ export const CardGame = Vue.component('CardGame', {
                 </ul>
                 <div class="card-body">
                     <p class="fs-3 mb-3 fw-bold text-center text-white"><span class="text-danger">$</span> {{precio}}</p>
+                    <button class="btn btn-danger-2 rounded-0 w-100 buy-button">Comprar</button>
                 </div>
             </div>
         </div>
