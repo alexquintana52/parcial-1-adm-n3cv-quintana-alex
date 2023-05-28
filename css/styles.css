@@ -265,13 +265,14 @@ h1 {
     background-color: #da2843;
 }
 
-.fav-message {
-    height: 200px;
-    resize: none;
+.done {
+    text-decoration: line-through 2px crimson;
 }
 
-.process-info {
-    min-height: calc(100vh - 200px);
-    display: flex;
-    align-items: center;
+.form-info {
+    overflow-x: auto;
+}
+
+.remove-game {
+    cursor: pointer;
 }

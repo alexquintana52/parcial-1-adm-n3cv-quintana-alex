@@ -1,4 +1,4 @@
-Vue.component('CardGame', {
+export const CardGame = Vue.component('CardGame', {
     props: [
         "id",
         "titulo",
