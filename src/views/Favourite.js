@@ -47,9 +47,9 @@ export const Favourite = {
                                 <tbody>
                                     <tr v-for="item in gameInfo">
                                         <th scope="row">{{item.counted}}</th>
-                                        <td v-model="gameName" :class="{done: item.done}">{{item.name}}</td>
-                                        <td v-model="gameGenre">{{item.genre}}</td>
-                                        <td v-model="gamePlat">{{item.plat}}</td>
+                                        <td :class="{done: item.done}">{{item.name}}</td>
+                                        <td>{{item.genre}}</td>
+                                        <td>{{item.plat}}</td>
                                         <td>
                                             <input class="p-3" type="checkbox" v-model="item.done">
                                             <span @click="removeGame(game)" class="text-danger remove-game ms-3">Eliminar</span>
@@ -73,17 +73,6 @@ export const Favourite = {
             count: 1,
         }
     },
-    mounted(){
-        if(localStorage.gameName){
-            this.gameName = localStorage.gameName
-        }
-        if(localStorage.gameGenre){
-            this.gameGenre = localStorage.gameGenre
-        }
-        if(localStorage.gamePlat){
-            this.gamePlat = localStorage.gamePlat
-        }
-    },
     methods: {
         addInfo(){
             this.gameInfo.push({
@@ -104,21 +93,5 @@ export const Favourite = {
             const gameIndex = this.gameInfo.indexOf(game)
             this.gameInfo.splice(gameIndex, 1)
         },
-        addStorage(){
-            localStorage.Nombre = this.gameName
-            localStorage.Genero = this.gameGenre
-            localStorage.Plataforma = this.gamePlat
-        }
     },
-    watch: {
-        getName(newName){
-            localStorage.gameName = newName
-        },
-        getGenre(newGenre){
-            localStorage.gameGenre = newGenre
-        },
-        getPlat(newPlat){
-            localStorage.gamePlat = newPlat
-        }
-    }
 }
